@@ -10,7 +10,17 @@ package org.yourcompany.yourproject;
  */
 public class New {
 
+    //public static void main(String[] args) {
+      //  System.out.println("Hello World!");
+   
+    
+    //}
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        int numero = 10;
+        String nombre = "Gregoria";
+        char letra = 'B';
+        double temperatura = 2.1;
+        boolean siONo = true;
+        long largo = 123456789L;
     }
 }
