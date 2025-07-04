@@ -60,6 +60,7 @@ public class New {
 
   //CONDICIONALES IF, ELSE
 
+/*
     int uno = 5;
     int dos = 10;
 
@@ -67,6 +68,24 @@ public class New {
       System.out.println("La variable dos es mayor a la primera");
     } else {
       System.out.println("La variable mas grande es la primera");
+    }
+*/
+
+
+    //CONDICIONAL SIMPLE (ANIDADOS)
+    //IF|ELSE + IF|ELSE
+
+    int uno = 20;
+    int dos = 15;
+
+    if (dos > uno) {
+      System.out.println("La variable dos es mayor a la primera");
+    } else {
+      if( uno == dos){
+        System.out.println("Ambas variables tienen el mismo valor");
+      }else{
+        System.out.println("La variable mayor es la primera");
+      }
     }
 }
 }
