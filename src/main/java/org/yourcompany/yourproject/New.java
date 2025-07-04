@@ -11,7 +11,7 @@ package org.yourcompany.yourproject;
 public class New {
 
     public static void main(String[] args) {
-    System.out.println("Hello World!");
+    //System.out.println("Hello World!");
    
     //public static void main(String[] args) {
       //Tipos de variables
@@ -35,7 +35,8 @@ public class New {
     Por ejemplo: Si una variable número vale 35, y una variable número2 vale 20, 
     realizar las acciones necesarias para que el número pase a valer 20 y númweo2 
     pase a valer 35. Una vez realizado el cambio mostrar el resultado por pantalla.
-    */
+    
+
 
   int num1, num2, aux;
 
@@ -54,7 +55,20 @@ public class New {
   System.out.println("----Despues----");
   System.out.println("Num1 = " + num1);
   System.out.println("Num2 = " + num2);
-  }
+  */
+
+
+  //CONDICIONALES IF, ELSE
+
+    int uno = 5;
+    int dos = 10;
+
+    if (dos > uno) {
+      System.out.println("La variable dos es mayor a la primera");
+    } else {
+      System.out.println("La variable mas grande es la primera");
+    }
+}
 }
 
 //primero compilar con: javac src/main/java/org/yourcompany/yourproject/New.java
