@@ -3,7 +3,7 @@
  */
 
 package org.yourcompany.yourproject;
-
+import java.util.Scanner;
 /**
  *
  * @author Marcelo
@@ -92,6 +92,7 @@ public class New {
 
   //CONDICIONAL SWITCH
 
+/*
   int dia = 2;
   String nombreDia;
 
@@ -113,6 +114,62 @@ public class New {
     default: nombreDia = "Numero de dia invalido";
   }
   System.out.println("El dia de la semana seleccionado es: " + nombreDia);
+}
+*/
+
+//EJERCICIO CONDICIONALES
+/*
+Una pequeña despensa desea calcular los sueldos de sus empleados. Los puestos de los mismos 
+pueden tener 3 categorías: 1-repositor, 2-cajero, 3-supervisor.
+.Los repositores cobran $15.890 + bono 10%
+.Los cajeros cobran $25.630,89 fijos
+.Los supervisores cobran $35.520,20 en bruto al cual se les descuenta un 11% de jubilacion
+Se necesita un programa que, dependiendo del tipo de empleado del que se trate calcule
+y muestre en pantalla el correspondiente sueldo
+
+
+String Puesto = "Super";
+String Repo = "Repo";
+String Caje = "Caje";
+String Super = "Super";
+double repositor = 15890;
+double porcRepo = 10.0;
+double totalRepo = repositor + (repositor * (porcRepo / 100));
+
+double cajero = 25630.89;
+
+double supervisor = 35520.20;
+double porcSuper = 0.11;
+double totalSuper = supervisor - (supervisor * porcSuper);
+
+if (Puesto.equals(Repo)){
+  System.out.println("El sueldo del repositor es de: " + totalRepo);
+} else if (Puesto.equals(Caje)) {
+  System.out.println("El sueldo del cajero es de: " + cajero);
+} else if (Puesto.equals(Super)){
+  System.out.println("El sueldo del supervisor es de: " + totalSuper);
+}
+*/
+
+double sueldo = 0;
+int categoria;
+
+System.out.println("Ingrese el tipo de categoria que desea calcular el sueldo");
+Scanner teclado = new Scanner (System.in);//permite ingresar datos por teclado
+
+categoria = teclado.nextInt();//lee enteros por teclados, el proximo entero que ingrese se le asignara a categoria
+
+if (categoria == 1) {
+  sueldo = 15890 + (15890 * 0.10);
+} else if(categoria == 2) {
+  sueldo = 25630.89;
+} else if(categoria == 3){
+  sueldo = 35560.20 - (35560.20 * 0.11);
+} else {
+  System.out.println("El numero ingresado no es valido");
+}
+
+System.out.println("El total del sueldo para la categoria seleccionada " +  categoria + " es igual a: $" + sueldo);
 }
 }
 
