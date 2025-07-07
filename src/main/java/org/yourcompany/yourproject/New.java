@@ -169,7 +169,9 @@ if (categoria == 1) {
   System.out.println("El numero ingresado no es valido");
 }
 
+if(categoria == 1 || categoria == 2 || categoria == 3){
 System.out.println("El total del sueldo para la categoria seleccionada " +  categoria + " es igual a: $" + sueldo);
+}
 }
 }
 
