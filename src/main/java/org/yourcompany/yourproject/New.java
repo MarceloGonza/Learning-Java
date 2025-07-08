@@ -150,7 +150,7 @@ if (Puesto.equals(Repo)){
   System.out.println("El sueldo del supervisor es de: " + totalSuper);
 }
 */
-
+ /*
 double sueldo = 0;
 int categoria;
 
@@ -172,7 +172,22 @@ if (categoria == 1) {
 if(categoria == 1 || categoria == 2 || categoria == 3){
 System.out.println("El total del sueldo para la categoria seleccionada " +  categoria + " es igual a: $" + sueldo);
 }
-}
+*/
+
+
+  //Operador ternario
+
+  double promedio;
+  String condicionFinal;
+
+  Scanner teclado = new Scanner(System.in);
+  
+  System.out.println("Ingrese el promedio general del alumno en TodoCode");
+  promedio = teclado.nextDouble();
+
+  condicionFinal = promedio >= 6 ? "Aprobado" : "Desaprobado";
+  System.out.println("La condicion final del alumno es: " + condicionFinal);
+  }
 }
 
 //primero compilar con: javac src/main/java/org/yourcompany/yourproject/New.java
