@@ -3,7 +3,6 @@
  */
 
 package org.yourcompany.yourproject;
-import java.util.Scanner;
 /**
  *
  * @author Marcelo
@@ -117,6 +116,8 @@ public class New {
 }
 */
 
+
+
 //EJERCICIO CONDICIONALES
 /*
 Una pequeña despensa desea calcular los sueldos de sus empleados. Los puestos de los mismos 
@@ -151,6 +152,7 @@ if (Puesto.equals(Repo)){
 }
 */
  /*
+
 double sueldo = 0;
 int categoria;
 
@@ -175,8 +177,10 @@ System.out.println("El total del sueldo para la categoria seleccionada " +  cate
 */
 
 
+
   //Operador ternario
 
+/*
   double promedio;
   String condicionFinal;
 
@@ -187,6 +191,57 @@ System.out.println("El total del sueldo para la categoria seleccionada " +  cate
 
   condicionFinal = promedio >= 6 ? "Aprobado" : "Desaprobado";
   System.out.println("La condicion final del alumno es: " + condicionFinal);
+
+*/
+
+
+
+//ESTRUCTURAS REPETITIVAS
+  //WHILE
+
+/*
+  int cont = 0;
+
+  while (cont <= 10){
+    System.out.println("Estoy en la vuelta " + cont);
+    cont = cont + 1 ;
+    }
+  */
+
+
+
+ //BUCLES INFINITOS:
+  /*
+  CUANDO EL PROGRAMA NO TIENE UNA CONDION O NO ESTA CORRECTAMENTE ESTABLECIDA, EJ:
+  int cont = 0;
+
+  while (cont <= 10){
+    System.out.println("Estoy en la vuelta " + cont);
+    }
+
+    //BUCLE INFINITO CONTROLADO POR CENTINELA:
+    boolean centinela = true;
+
+    while (centinela == true) {
+    System.out.println("El valor de la bandera es "+ centinela);
+    }
+  */
+
+
+
+  //ESTRUCTURAS REPETITIVAS: FOR
+  //CONTROLADA POR CONTADOR
+  //COMPUESTA POR INICIALIZACION DE VARIABLE, CONDICION DE FIN DE CICLO Y MODIFICACION DE VARIABLE
+
+  
+  //for (int cont = 0; cont <= 10; cont ++) {
+    //System.out.println("Estoy en la vuelta " + cont);
+  //}
+
+
+
+
+
   }
 }
 
