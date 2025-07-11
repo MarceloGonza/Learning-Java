@@ -4,8 +4,6 @@
 
 package org.yourcompany.yourproject;
 
-import java.util.Scanner;
-
 /**
  *
  * @author Marcelo
@@ -244,10 +242,11 @@ System.out.println("El total del sueldo para la categoria seleccionada " +  cate
 
 
 
+
   //EJERCICIO DE ESTRUCTURAS REPETITIVAS
   //Realizar un programa que dado por teclado un límite numérico por teclado, 
   //muestre en pantalla todos los números hasta ese límite (empezando por 1)
-
+/*
   int numero;
   Scanner teclado = new Scanner(System.in);
   System.out.println("ingrese un numero para detener el bucle");
@@ -256,6 +255,17 @@ System.out.println("El total del sueldo para la categoria seleccionada " +  cate
 
   for(int cont = 1; cont <= numero; cont ++){
     System.out.println("Numero: " + cont);
+  }
+*/
+
+
+
+/*Realizar un programa que muestre por pantalla los numeros del 200 al 250 
+saltando de 2 en 2
+*/
+
+  for (int i = 200; i <= 250; i+=2) {
+    System.out.println("Numero: " + i);
   }
   }
 }
