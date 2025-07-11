@@ -3,6 +3,7 @@
  */
 
 package org.yourcompany.yourproject;
+import java.util.Scanner;
 
 /**
  *
@@ -262,11 +263,32 @@ System.out.println("El total del sueldo para la categoria seleccionada " +  cate
 
 /*Realizar un programa que muestre por pantalla los numeros del 200 al 250 
 saltando de 2 en 2
-*/
 
   for (int i = 200; i <= 250; i+=2) {
     System.out.println("Numero: " + i);
   }
+*/
+
+
+
+/*Realizar un programa que muestre en pantalla palabras que sean ingresadas
+por teclado hasta que se ingrese la palabra "salir"
+*/
+
+String palabra;
+Scanner teclado = new Scanner(System.in);
+
+System.out.println("Ingrese cualquier palabra. Para terminar el bucle escriba salir");
+palabra = teclado.nextLine();
+
+while(!palabra.equalsIgnoreCase("salir")){ //ignora si es mayuscula o minuscula
+  System.out.println("Ha ingresado la palabra: " + palabra);
+  System.out.println("Ingrese otra palabra, o escriba 'salir' para terminar: ");
+  palabra = teclado.nextLine();
+}
+
+System.out.println("Programa finalizado. ");
+teclado.close();
   }
 }
 
