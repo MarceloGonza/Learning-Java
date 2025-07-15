@@ -4,8 +4,6 @@
 
 package org.yourcompany.yourproject;
 
-import java.util.Scanner;
-
 /**
  *
  * @author Marcelo
@@ -310,7 +308,7 @@ Adultos mayores (mayores de 50 años)
 Se necesita un programa que, a partir del ingreso de los datos y edad de cada 
 participante, se muestre por pantalla a que categoria debe ser inscripto. 
 Cabe destacar que, al finalizar el dia, para dar fin a las inscripciones, 
-se debe ingresar un dni con el valor 0, y un nombre con la palabra "fin*/
+se debe ingresar un dni con el valor 0, y un nombre con la palabra "fin"
 
 int edad;
 Scanner teclado = new Scanner(System.in);
@@ -343,6 +341,51 @@ if(edad >=6 && edad <=10){
 } else {
   System.out.println("Usted debe inscribirse en la categoria Adultos Mayores");
 }
+}
+*/
+
+
+
+//EJERCICIO ARBOL DE NAVIDAD
+//IMPRIMIR POR CONSOLA UN ARBOLITO DE NAVIADAD
+
+//declarar altura de arbol
+int altura = 10;
+
+//bucle para recorrer todas las filas (altura)
+for (int fila = 0; fila < altura; fila++){
+  //bucle para los espacios
+  for (int espacio = 0; espacio<(altura-fila-1);espacio ++){
+    //                             4   - 0  - 1 = 3
+    //                             4   - 1  - 1 = 2
+    //                             4   - 2  - 1 = 1
+    //                             4   - 3  - 1 = 0
+    System.out.print(" ");
+  }
+  //buble para recorrer los asteriscos
+  for (int asterisco = 0; asterisco < (fila * 2) + 1; asterisco ++){
+    //                                   0  * 2  + 1 = 1
+    //                                   1  * 2  + 1 = 3
+    //                                   2  * 2  + 1 = 5
+    //                                   3  * 2  + 1 = 7
+    System.out.print("*");
+  }
+  System.out.println("");
+}
+
+//tronco
+int largoTronco = 2;
+for (int base = 0; base < largoTronco; base++){
+
+//segun los espacios
+  for(int espacio=0; espacio<(altura-2); espacio++){
+    System.out.print(" ");
+  }
+  //barras tronco
+  for(int tronco = 0; tronco < 3; tronco++){
+    System.out.print("|");
+  }
+  System.out.println("");
 }
   }
 }
