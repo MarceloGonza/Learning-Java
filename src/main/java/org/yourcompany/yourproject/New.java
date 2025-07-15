@@ -3,7 +3,9 @@
  */
 
 package org.yourcompany.yourproject;
+import java.util.Scanner;
 
+//import java.util.Scanner; Para importar Scanner
 /**
  *
  * @author Marcelo
@@ -350,6 +352,7 @@ if(edad >=6 && edad <=10){
 //IMPRIMIR POR CONSOLA UN ARBOLITO DE NAVIADAD
 
 //declarar altura de arbol
+/*
 int altura = 10;
 
 //bucle para recorrer todas las filas (altura)
@@ -370,7 +373,7 @@ for (int fila = 0; fila < altura; fila++){
     //                                   3  * 2  + 1 = 7
     System.out.print("*");
   }
-  System.out.println("");
+  System.out.println(""); //necessario para ir a la fila de abajo, si no coloca todo junto
 }
 
 //tronco
@@ -378,7 +381,7 @@ int largoTronco = 2;
 for (int base = 0; base < largoTronco; base++){
 
 //segun los espacios
-  for(int espacio=0; espacio<(altura-2); espacio++){
+  for(int espacio=0; espacio < (altura-2); espacio++){
     System.out.print(" ");
   }
   //barras tronco
@@ -386,6 +389,39 @@ for (int base = 0; base < largoTronco; base++){
     System.out.print("|");
   }
   System.out.println("");
+}
+*/ 
+
+
+
+
+
+//VECTORES
+//UNIDIMENSIONALES
+
+//Declaracion
+int vector [] = new int [4]; // 0 1 2 3
+
+
+//Asignacion (manual)
+//vector [0] = 2;
+//vector [1] = 35;
+//vector [2] = 23;
+//vector [3]= 56;
+
+
+//Asignacion por teclado
+Scanner teclado = new Scanner (System.in);
+  for(int i = 0; i<vector.length; i++){
+    System.out.println("Ingrese el valor para el indice " + i);
+    vector[i] = teclado.nextInt();
+  }
+
+//recorrido
+for(int i = 0; i<vector.length; i++){
+  System.out.println("Estoy en el indice: " + i);
+  System.out.println("Tengo guardado un " + vector[i]);
+  System.out.println("-------------------");
 }
   }
 }
