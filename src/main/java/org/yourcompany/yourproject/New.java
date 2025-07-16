@@ -4,8 +4,6 @@
 
 package org.yourcompany.yourproject;
 import java.util.Scanner;
-
-//import java.util.Scanner; Para importar Scanner
 /**
  *
  * @author Marcelo
@@ -14,7 +12,7 @@ public class New {
 
     public static void main(String[] args) {
     //System.out.println("Hello World!");
-   
+   //import java.util.Scanner;
     //public static void main(String[] args) {
       //Tipos de variables
         //int numero = 10;
@@ -396,9 +394,10 @@ for (int base = 0; base < largoTronco; base++){
 
 
 
+
 //VECTORES
 //UNIDIMENSIONALES
-
+/*
 //Declaracion
 int vector [] = new int [4]; // 0 1 2 3
 
@@ -423,6 +422,49 @@ for(int i = 0; i<vector.length; i++){
   System.out.println("Tengo guardado un " + vector[i]);
   System.out.println("-------------------");
 }
+*/
+
+
+
+
+
+//MATRICES
+
+//Declaracion
+
+int matriz [][] = new int [3][3];
+
+//Asignacion manual 
+/* 
+matriz [0][0] = 5;
+matriz [0][1] = 13;
+matriz [0] [2] = 96;
+matriz [1] [0] = 35;
+matriz [1] [1] = 33;
+matriz [1] [2] = 71;
+matriz [2] [0] = 446;
+matriz [2] [1] = 228;
+matriz [2][2] = 24;
+*/
+// Recorrido
+
+//ASIGNACION POR TECLADO
+Scanner teclado = new Scanner (System.in);
+for(int f = 0; f < 3; f++){ //f de fila
+  for(int c = 0; c < 3; c ++){ //c de columna
+    System.out.println("Ingrese el valor de la posicion f: " + f + " c: " + c);
+    matriz[f][c] = teclado.nextInt();
+  }
+}
+  
+
+for(int f = 0; f < 3; f++){ //f de fila
+  for(int c = 0; c < 3; c ++){ //c de columna
+    System.out.println("El valor de la posicion f: " + f + "c: " + c);
+    System.out.println("es de: "+ matriz [f] [c]);
+  }
+}
+
   }
 }
 
