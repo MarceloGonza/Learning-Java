@@ -431,11 +431,11 @@ for(int i = 0; i<vector.length; i++){
 //MATRICES
 
 //Declaracion
-
+/* 
 int matriz [][] = new int [3][3];
 
 //Asignacion manual 
-/* 
+
 matriz [0][0] = 5;
 matriz [0][1] = 13;
 matriz [0] [2] = 96;
@@ -445,7 +445,7 @@ matriz [1] [2] = 71;
 matriz [2] [0] = 446;
 matriz [2] [1] = 228;
 matriz [2][2] = 24;
-*/
+
 // Recorrido
 
 //ASIGNACION POR TECLADO
@@ -464,7 +464,35 @@ for(int f = 0; f < 3; f++){ //f de fila
     System.out.println("es de: "+ matriz [f] [c]);
   }
 }
+*/
 
+
+
+
+
+//EJERCICIO 1
+//REALIZAR UN PROGRAMA QUE PERMITA CARGAR 15 NUMEROS EN UN VECTOR.
+//UNA VEZ CARGADOS, SE NECESITA QUE EL PROGRAMA CUENTE E INFORME POR
+//PANTALLA CUANTAS VECES SE CARGÓ EL NUMERO 3 
+/*
+*/
+int vector [] = new int [15];
+Scanner teclado = new Scanner (System.in);
+
+//CARGA
+for (int i = 0; i < vector.length; i++) {
+    System.out.println("Ingrese un valor para el indice " + i);
+    vector [i]= teclado.nextInt();
+}
+
+//LECTURA Y CONTAR LOS 3
+int cont = 0;
+for(int i = 0; i < vector.length; i++){ //lenght o 15 directamente
+  if(vector[i] == 3){
+    cont = cont +1;
+  }
+}
+System.out.println("La cantidad de numeros 3 que hay en el vector es de: " + cont);
   }
 }
 
