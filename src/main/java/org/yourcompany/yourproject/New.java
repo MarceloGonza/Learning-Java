@@ -3,9 +3,6 @@
  */
 
 package org.yourcompany.yourproject;
-
-import java.util.Scanner;
-
 /**
  *
  * @author Marcelo
@@ -509,8 +506,6 @@ alumnp y que en la ultima columna se calculen los promedios. Una vez realizados 
 se desea mostrar las 3 notas de cada alumno y el promedio correspondiente recorriendo
 la matriz
 
-*/
-
 Double matriz[][] = new Double [4][4]; 
 
 Scanner teclado = new Scanner(System.in);
@@ -534,6 +529,33 @@ for (int f = 0; f < 4; f++){
     }
   System.out.println("El promedio de las notas es : " + matriz[f][3]);
   }
+*/
+
+
+
+
+/*
+EJERCICIO 3
+Llevar a cabo un programa que incluya un vector que almacene los nombres: Alejandra,
+Leonardo, Rosa, Guillermo, Gabriel, Daniel, Luisa, y Ludmila. Realizar un recorrido
+del vector para cargar los datos y otro recorrido para mostrar los mismos por pantalla.
+*/
+
+String vector [] = new String [8]; //indicar la cantidad de elementos, no confundir con posicion (no incluir 0)
+
+vector [0] = "Alejandra";
+vector [1] = "Leonardo";
+vector [2] = "Rosa";
+vector [3] = "Guillermo";
+vector [4] = "Gabriel";
+vector [5] = "Daniel";
+vector [6] = "Luisa";
+vector [7] = "Ludmila";
+
+for(String variable : vector){ //for mejorado para iterar sobre arrays y colecciones
+  System.out.println("Los nombres almacenados son: " + variable);
+}
+
 }
 }
 
