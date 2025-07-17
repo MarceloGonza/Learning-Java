@@ -3,7 +3,9 @@
  */
 
 package org.yourcompany.yourproject;
+
 import java.util.Scanner;
+
 /**
  *
  * @author Marcelo
@@ -475,7 +477,7 @@ for(int f = 0; f < 3; f++){ //f de fila
 //UNA VEZ CARGADOS, SE NECESITA QUE EL PROGRAMA CUENTE E INFORME POR
 //PANTALLA CUANTAS VECES SE CARGÓ EL NUMERO 3 
 /*
-*/
+
 int vector [] = new int [15];
 Scanner teclado = new Scanner (System.in);
 
@@ -493,14 +495,53 @@ for(int i = 0; i < vector.length; i++){ //lenght o 15 directamente
   }
 }
 System.out.println("La cantidad de numeros 3 que hay en el vector es de: " + cont);
+*/
+
+
+
+
+/*
+EJERCICIO 2:
+En una tabla de 4 filas y 4 columnas se guardan las notas de 4 alumnos de secundaria.
+cada fila corresponde a las notas y al promedio de cada alumno. Se necesita un programa
+que permita a un profesor cargar, en las posiciones (columnas) de cada fila, las notas al
+alumnp y que en la ultima columna se calculen los promedios. Una vez realizados los calculos,
+se desea mostrar las 3 notas de cada alumno y el promedio correspondiente recorriendo
+la matriz
+
+*/
+
+Double matriz[][] = new Double [4][4]; 
+
+Scanner teclado = new Scanner(System.in);
+Double suma = 0.0;
+
+//Asignacion
+for (int f = 0; f < 4; f++){
+  for(int c = 0; c < 3; c ++){
+    System.out.println("Ingrese la calificacion del alumno numero: " + f );
+    matriz[f][c] = teclado.nextDouble();
+    suma = suma + matriz[f][c];
+  }
+  matriz [f][3] = suma / 3;
+  suma = 0.0;
+}
+//RECORRER
+for (int f = 0; f < 4; f++){
+  System.out.println("Las notas del alumno numero " + f + "son: ");
+  for(int c = 0; c < 3; c ++){
+    System.out.println("Nota numero " + c + " = " + matriz[f][c]);
+    }
+  System.out.println("El promedio de las notas es : " + matriz[f][3]);
   }
 }
-
+}
 
 
 //primero compilar con: javac src/main/java/org/yourcompany/yourproject/New.java
 //luego ejecutar con: java -cp src/main/java org.yourcompany.yourproject.New
 //si no ejecuta por muchos argumentos, usar comillas dobles
+//import java.util.Scanner para usar el scanner
 //PASOS CON LOS QUE EJECUTE: 
 //cd "/d/Mis cosas/Programacion/Java/New"
 //javac src/main/java/org/yourcompany/yourproject/New.java
