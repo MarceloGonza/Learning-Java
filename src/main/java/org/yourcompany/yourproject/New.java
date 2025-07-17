@@ -3,6 +3,9 @@
  */
 
 package org.yourcompany.yourproject;
+
+import java.util.Scanner;
+
 /**
  *
  * @author Marcelo
@@ -539,7 +542,7 @@ EJERCICIO 3
 Llevar a cabo un programa que incluya un vector que almacene los nombres: Alejandra,
 Leonardo, Rosa, Guillermo, Gabriel, Daniel, Luisa, y Ludmila. Realizar un recorrido
 del vector para cargar los datos y otro recorrido para mostrar los mismos por pantalla.
-*/
+
 
 String vector [] = new String [8]; //indicar la cantidad de elementos, no confundir con posicion (no incluir 0)
 
@@ -555,7 +558,72 @@ vector [7] = "Ludmila";
 for(String variable : vector){ //for mejorado para iterar sobre arrays y colecciones
   System.out.println("Los nombres almacenados son: " + variable);
 }
+*/
 
+
+
+
+
+
+
+/*
+En tres vectores duferentes se guardan los nombres, temperaturas mínimas y máximas
+de 5 ciudades de la provincia de Misiones. En el primer vector se guardan los nombres
+de las ciudades, en el segundo las temperaturas mínimas alcanzadas y en el tercero
+las temperaturas máximas alcanzadas en la última semana. Se necesita un programa
+que permita la carga de las ciudades, sus temperaturas mínimas y máximas; además,
+deberá poder informar por pantalla cual fue la ciudad con la temperatura más baja
+y cuál con la temperatura más alta (dando a conocer la cantidad de grados).  
+*/
+
+//Ciudades
+String ciudades [] = new String [5]; 
+//Temp mínimas
+Double minimas [] = new Double [5];
+//Temp máximas
+Double maximas [] = new Double[5];
+
+//Scaner para cargar por teclado los nombres
+Scanner teclado = new Scanner(System.in);
+//Scanner paracargar los Doubles
+Scanner teclado2 = new Scanner(System.in);
+
+for(int i = 0; i < ciudades.length; i++){
+  System.out.println("Ingrese el nombre de la ciudad: " + i);
+  ciudades[i] = teclado.nextLine();
+
+  System.out.println("Ingrese la minima de la ciudad " + i);
+  minimas[i] = teclado2.nextDouble();
+
+  System.out.println("Ingrese la maxima de la ciudad " + i);
+  maximas[i] = teclado2.nextDouble();
+  }
+
+//variable auxiliar
+Double minima = 9999999.00;
+//variable posicion
+int posMin = -1;
+  //determinamos la minima
+  for(int i = 0; i < minimas.length; i++){
+    if(minimas[i] < minima){
+      minima = minimas[i];
+      posMin = i;
+    }
+  }
+  //variable auxiliar para maximas
+  Double maxima = -9999999.00;
+  int posMax = -1;
+  //determinamos la maxima
+  for(int i = 0; i < maximas.length; i++){
+    if(maximas[i] > maxima){
+      maxima = maximas[i];
+      posMax = i;
+    }
+  }
+  System.out.println("La temperatura minima es de: " + minima);
+  System.out.println("Se registro en la ciudad de: " + ciudades[posMin]);
+  System.out.println("La temperatura maxima es de: " + maxima);
+  System.out.println("Y se registro en la ciudad de: " + ciudades[posMax]);
 }
 }
 
