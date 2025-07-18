@@ -4,8 +4,6 @@
 
 package org.yourcompany.yourproject;
 
-import java.util.Scanner;
-
 /**
  *
  * @author Marcelo
@@ -629,29 +627,21 @@ LLEVAR A CABO UN PROGRAMA QUE PERMITA CARGAR COMPLETAMENTE CON NUMEROS
 5 UNA MATRIZ DE 4 X 5 (4 FILAS Y 5 COLUMNAS)
 */
 
-int matriz [][] = new int[4][5];
-
-Scanner teclado = new Scanner (System.in);
-
+int matriz [][] = new int [4][5];
 //ASIGNACION
 for (int f = 0; f < 4; f++){
   for(int c = 0; c < 5; c ++){
-    System.out.println("Ingrese los numeros correspondientes de la fila numero: " + f);
-    matriz[f][c] = teclado.nextInt();
+    matriz[f][c] = 5;
   }
 }
-
-System.out.println("");
-System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - -");
-System.out.println("");
 
 //MOSTRAR
 for(int f = 0; f < 4; f ++){
   for(int c = 0; c < 5; c ++){
-    System.out.println("Posicion: " + f + " valor: " + c);
-    System.out.println("---------------------------");
+    System.out.print(matriz[f][c]);
   }
-}
+  System.out.println("\n");
+  }
 }
 }
 
