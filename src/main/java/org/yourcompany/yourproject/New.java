@@ -4,6 +4,8 @@
 
 package org.yourcompany.yourproject;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Marcelo
@@ -625,7 +627,6 @@ System.out.println("Y se registro en la ciudad de: " + ciudades[posMax]);
 /*
 LLEVAR A CABO UN PROGRAMA QUE PERMITA CARGAR COMPLETAMENTE CON NUMEROS
 5 UNA MATRIZ DE 4 X 5 (4 FILAS Y 5 COLUMNAS)
-*/
 
 int matriz [][] = new int [4][5];
 //ASIGNACION
@@ -642,6 +643,91 @@ for(int f = 0; f < 4; f ++){
   }
   System.out.println("\n");
   }
+  */
+
+
+
+/*EJERCICIO 6
+
+Una compañia de vuelos cuenta con 6 destinos a los que reliaza 3 vuelos diariamente,
+uno por la mañana, otro al mediodia y otro por la noche. Para administrar estos datos
+utiliza una matriz, donde cada fila es un destino y en cada columna se guarda la cantidad
+de asientos disponibles. Por ejemplo
+                                0           1         2
+                              Mañana     Mediodia   Noche
+            0 Rio de Janeiro   120          15        30
+            1 Cancun            65           1         2
+            2 Madrid             4          52         7
+            3 Roma              46          32        16
+            4 Milan             64          23        11
+            5 Iguazu            61          12        91
+
+1 -  Se necesita un programa que permita la carga de la matriz con la cantidad de
+asientos para cada vuelo
+
+2 - Al mismo tiempo, el programa debe permitir a un usuario ingresar el número
+de destino al que quiere dirigirse, el numero de vuelo (dependiendo si quiere
+viajar a la mañana, tarde o noche), y la cantidad de pasajes que necesita.
+
+3 - A partiur de la solicitud del usuario, el programa debe controlar si hay la cantidad
+suficiente de asientos para la cantidad de pasajes que se requiere. En caso de que asi
+sea, se debe mostrar un cartel por pantalla que diga "su reserva fue realizada con exito"
+y se debe encontrar del total de asientos los solicitados por el usuario. En caso de no
+haber más asientos disponibles, se debe informar otro cartel que diga "disculpe, no se
+pudo completar su operacion dado que no hay asientos disponibles".
+
+Desde la compañia de vuelos manifiestan que NO CONOCEN cuantas ventas/reservas se hacen
+por dia. Por lo cual, para finalizar las ventas se ingresa la palabra "finish".
+*/
+//matriz de vuelos
+int vuelos [][] = new int [6][3];
+
+//Scanner asientos
+Scanner teclado = new Scanner(System.in);
+
+
+//Cargamos la matriz
+for(int f = 0; f < 6; f++){
+  for(int c = 0; c < 3; c++){
+    System.out.println("Ingrese la cantidad de asientos para el destino: " + f + " horario " + c);
+    vuelos [f][c] = teclado.nextInt();
+  }
+}
+
+//venta de asientos
+Scanner teclado2 = new Scanner(System.in);
+String terminar = "";
+
+int destino, horario, asientos;
+System.out.println(" - - VENTAS - - ");
+while(!terminar.equalsIgnoreCase("finish")){
+  System.out.println("Ingrese el numero de destino: ");
+  destino = teclado.nextInt();
+  System.out.println("Ingrese el horario de vuelo: ");
+  horario = teclado.nextInt();
+  System.out.println("Ingrese la cantidad de asientos que desea comprar: ");
+  asientos = teclado.nextInt();
+
+//VALIDACION DESTINOS
+if(destino >= 0 && destino <= 5){
+  if(horario >= 0 && horario <= 2){
+    if(vuelos[destino][horario] >= asientos){
+      System.out.println("Su reserva fue realizada con exito");
+      vuelos[destino][horario] = vuelos [destino][horario] - asientos;
+    } else {
+      System.out.println("No hay asientos disponibles");
+    }
+  }
+   else {
+    System.out.println("Horario no existente,  ingrese un valor entre 0 y 2");
+   }
+} else{
+  System.out.println("Dstino no existente, ingrese un valor entre 0 y 5");
+}
+    System.out.println("Ingrese finish para terminar o cualquier valor para cotinuar");
+    terminar = teclado2.next();
+    }
+  
 }
 }
 
