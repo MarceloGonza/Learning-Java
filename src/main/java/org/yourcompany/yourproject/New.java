@@ -573,57 +573,53 @@ de las ciudades, en el segundo las temperaturas mínimas alcanzadas y en el terc
 las temperaturas máximas alcanzadas en la última semana. Se necesita un programa
 que permita la carga de las ciudades, sus temperaturas mínimas y máximas; además,
 deberá poder informar por pantalla cual fue la ciudad con la temperatura más baja
-y cuál con la temperatura más alta (dando a conocer la cantidad de grados).  
+y cuál con la temperatura más alta (dando a conocer la cantidad de grados). 
 */
 
 //Ciudades
-String ciudades [] = new String [5]; 
-//Temp mínimas
-Double minimas [] = new Double [5];
-//Temp máximas
+String ciudades [] = new String[5];
+//Temperaturas
+Double minimas [] = new Double[5];
 Double maximas [] = new Double[5];
-
-//Scaner para cargar por teclado los nombres
-Scanner teclado = new Scanner(System.in);
-//Scanner paracargar los Doubles
+//Ingresar ciudades
+Scanner teclado = new Scanner (System.in);
+//Ingresar temperaturas
 Scanner teclado2 = new Scanner(System.in);
 
+//Recorrer y pedir nombres y temperaturas
 for(int i = 0; i < ciudades.length; i++){
   System.out.println("Ingrese el nombre de la ciudad: " + i);
   ciudades[i] = teclado.nextLine();
 
-  System.out.println("Ingrese la minima de la ciudad " + i);
+  System.out.println("Ingrese la temperatura minima: " + i);
   minimas[i] = teclado2.nextDouble();
 
-  System.out.println("Ingrese la maxima de la ciudad " + i);
+  System.out.println("Ingrese la temperatura maxima: " + i);
   maximas[i] = teclado2.nextDouble();
-  }
+}
 
-//variable auxiliar
+//Variable auxiliar temperaturas
 Double minima = 9999999.00;
-//variable posicion
+Double maxima = -999999.00;
+
+//Posicion auxiliar minimas y maximas
 int posMin = -1;
-  //determinamos la minima
-  for(int i = 0; i < minimas.length; i++){
-    if(minimas[i] < minima){
-      minima = minimas[i];
-      posMin = i;
-    }
-  }
-  //variable auxiliar para maximas
-  Double maxima = -9999999.00;
-  int posMax = -1;
-  //determinamos la maxima
-  for(int i = 0; i < maximas.length; i++){
-    if(maximas[i] > maxima){
-      maxima = maximas[i];
-      posMax = i;
-    }
-  }
-  System.out.println("La temperatura minima es de: " + minima);
-  System.out.println("Se registro en la ciudad de: " + ciudades[posMin]);
-  System.out.println("La temperatura maxima es de: " + maxima);
-  System.out.println("Y se registro en la ciudad de: " + ciudades[posMax]);
+int posMax = -1;
+//Recorro y guardo la minima y maxima, luego le paso el indice 
+for(int i = 0; i < minimas.length; i++){
+  if(minimas[i] < minima){
+    minima = minimas[i];
+    posMin = i;
+  } else if (maximas[i] > maxima){
+    maxima = maximas[i];
+    posMax = i;
+  } 
+}
+System.out.println("La temperatura minima fue de: " + posMin);
+System.out.println("Y se registro en la ciudad de: " + ciudades[posMin]);
+System.out.println("--------------------------");
+System.out.println("La temperatura maxima fue de: " + posMax);
+System.out.println("Y se registro en la ciudad de: " + ciudades[posMax]);
 }
 }
 
