@@ -505,7 +505,7 @@ EJERCICIO 2:
 En una tabla de 4 filas y 4 columnas se guardan las notas de 4 alumnos de secundaria.
 cada fila corresponde a las notas y al promedio de cada alumno. Se necesita un programa
 que permita a un profesor cargar, en las posiciones (columnas) de cada fila, las notas al
-alumnp y que en la ultima columna se calculen los promedios. Una vez realizados los calculos,
+alumno y que en la ultima columna se calculen los promedios. Una vez realizados los calculos,
 se desea mostrar las 3 notas de cada alumno y el promedio correspondiente recorriendo
 la matriz
 
@@ -574,7 +574,6 @@ las temperaturas máximas alcanzadas en la última semana. Se necesita un progra
 que permita la carga de las ciudades, sus temperaturas mínimas y máximas; además,
 deberá poder informar por pantalla cual fue la ciudad con la temperatura más baja
 y cuál con la temperatura más alta (dando a conocer la cantidad de grados). 
-*/
 
 //Ciudades
 String ciudades [] = new String[5];
@@ -620,6 +619,39 @@ System.out.println("Y se registro en la ciudad de: " + ciudades[posMin]);
 System.out.println("--------------------------");
 System.out.println("La temperatura maxima fue de: " + posMax);
 System.out.println("Y se registro en la ciudad de: " + ciudades[posMax]);
+*/
+
+
+
+
+/*
+LLEVAR A CABO UN PROGRAMA QUE PERMITA CARGAR COMPLETAMENTE CON NUMEROS
+5 UNA MATRIZ DE 4 X 5 (4 FILAS Y 5 COLUMNAS)
+*/
+
+int matriz [][] = new int[4][5];
+
+Scanner teclado = new Scanner (System.in);
+
+//ASIGNACION
+for (int f = 0; f < 4; f++){
+  for(int c = 0; c < 5; c ++){
+    System.out.println("Ingrese los numeros correspondientes de la fila numero: " + f);
+    matriz[f][c] = teclado.nextInt();
+  }
+}
+
+System.out.println("");
+System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - -");
+System.out.println("");
+
+//MOSTRAR
+for(int f = 0; f < 4; f ++){
+  for(int c = 0; c < 5; c ++){
+    System.out.println("Posicion: " + f + " valor: " + c);
+    System.out.println("---------------------------");
+  }
+}
 }
 }
 
